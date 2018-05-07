@@ -1,6 +1,6 @@
 ---
   - hosts: 127.0.0.1
-    connection: local
+    connection: ssh
     gather_facts: no
     tasks:
       - include_vars: ../../{{ aws_acct }}/EC2-Var/{{ node_var_file }}
