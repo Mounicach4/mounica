@@ -1,6 +1,6 @@
 ---
   - name: Provision EC2 Box
-    when: ( "{{ u_data }}" == "true" )
+    when: ( "u_data" == "true" )
     ec2:
       group: "{{ ec2_security_group }}"
       instance_type: "{{ ec2_instance_type }}"
@@ -51,15 +51,14 @@
         # ephemeral: ephemeral6
       termination_protection: yes
     register: ec2_info
-  - debug:
-        msg: '{{ec2_info.instances[0].private_ip}}'
-  - debug:
-        msg: '{{ec2_info.instances[0].tags.Name}}'
-
-  - set_fact:
-       ip: '{{ec2_info.instances[0].private_ip}}'
-  - set_fact:
-       hostname: '{{ec2_info.instances[0].tags.Name}}'
+#  - debug:
+#        msg: '{{ec2_info.instances[0].private_ip}}'
+#  - debug:
+#        msg: '{{ec2_info.instances[0].tags.Name}}'
+#  - set_fact:
+#       ip: '{{ec2_info.instances[0].private_ip}}'
+#  - set_fact:
+#       hostname: '{{ec2_info.instances[0].tags.Name}}'
 
   # - add_host:
        # hostname: '{{ec2_info.instances[0].private_ip}}'
