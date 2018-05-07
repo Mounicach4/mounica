@@ -6,7 +6,7 @@ count: "1"
 dest_check: "yes"
 u_data: "true"
 #IMAGE
-ec2_image: "ami-4759ce50"
+ec2_image: "ami-67b60218"
 #TAGS
 ec2_tag_appeml: "sdfgh"
 ec2_tag_comply: "false"
@@ -21,7 +21,7 @@ ec2_tag_pub: "false"
 #SECURITY
 ec2_security_group: ['sg-c9c6c780']
 #SUBNET
-ec2_subnet_ids: "sg-c9c6c780"
+ec2_subnet_ids: "subnet-9f1a14a0"
 #NETWORK
 ec2_name: "microintl01uedv"
 #ec2_private_ip: "10."
@@ -32,7 +32,7 @@ ec2_tag_appname: "microstrategy"
 ec2_tag_func: "intelligence server"
 ec2_root_volume_size: "500"
 user_data_file: "../../{{ aws_acct }}/userdata/{{ ec2_name }}"
-ec2_os: "rhel 7.3 "
+#ec2_os: "rhel 7.3 "
 #POST DEPLOY
 # sat_activation_key: "RHELEPEL_NONPROD"
 # ssh: "svcTowerDev"
