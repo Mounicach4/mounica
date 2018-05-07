@@ -1,5 +1,4 @@
 ---
--
   - name: Provision EC2 Box
     when: ( "{{ u_data }}" == "true" )
     ec2:
