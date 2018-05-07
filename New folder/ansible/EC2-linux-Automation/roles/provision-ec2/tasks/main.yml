@@ -1,6 +1,6 @@
 ---
   - name: Provision EC2 Box
-    when: ( " u_data " == "true" )
+    when: ( " u_data " == "false" )
     ec2:
       group: "{{ ec2_security_group }}"
       instance_type: "{{ ec2_instance_type }}"
